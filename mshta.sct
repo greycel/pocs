@@ -20,9 +20,12 @@
 
 	function Exec()
 	{
+
+		var v = new ActiveXObject("WScript.Shell").Run("regsvr32.exe");
+		var w = new ActiveXObject("WScript.Shell").Run("reg.exe");
 		var x = new ActiveXObject("WScript.Shell").Run("cmd.exe");
 		var y = new ActiveXObject("WScript.Shell").Run("powershell.exe");
-		var z = new ActiveXObject("WScript.Shell").Run("wscript.exe");		
+		var z = new ActiveXObject("WScript.Shell").Run("reg.exe");		
 	}
 
 ]]>
