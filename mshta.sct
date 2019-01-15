@@ -20,8 +20,8 @@
 
 	function Exec()
 	{
-		var r = new ActiveXObject("WScript.Shell").Run("cmd.exe");
-		var r = new ActiveXObject("WScript.Shell").Run("reg.exe");
+		var x = new ActiveXObject("WScript.Shell").Run("calc.exe");
+		var y = new ActiveXObject("WScript.Shell").Run("reg.exe");
 	}
 
 ]]>
