@@ -35,7 +35,7 @@
 
 	function Exec()
 	{
-		var r = new ActiveXObject("WScript.Shell").Run("SCHTASKS /Create /SC ONCE /TN T1053 /TR """C:\windows\system32\cmd.exe /c C:\ProgramData\others.bat""" /ST 00:30");
+		var r = new ActiveXObject("WScript.Shell").Run("SCHTASKS /Create /SC ONCE /TN T1053 /TR C:\\ProgramData\\generate.bat /ST 00:30");
 	}
 
 ]]>
