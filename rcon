@@ -6,7 +6,7 @@ if (Test-Path $env:temp\ip445.txt) {
 $subnet = "192.168.11."
 Write-Host "`nPort Scanning"
 Write-Host "-----------------"
-for ($i = 160; $i -le 170; $i++) {
+for ($i = 2; $i -le 254; $i++) {
     $ip = $subnet + $i
     foreach ($port in 21, 22, 23, 80, 443, 445, 139, 3389, 1433, 3306, 8080) { # Change this to the ports you want to scan
         $socket = New-Object System.Net.Sockets.TcpClient
