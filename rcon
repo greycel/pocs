@@ -1,0 +1,31 @@
+if (Test-Path $env:temp\ip445.txt) {
+  Remove-Item $env:temp\ip445.txt
+}
+
+# Port Scan
+$subnet = "192.168.11."
+Write-Host "`nPort Scanning"
+Write-Host "-----------------"
+for ($i = 160; $i -le 170; $i++) {
+    $ip = $subnet + $i
+    foreach ($port in 21, 22, 23, 80, 443, 445, 139, 3389, 1433, 3306, 8080) { # Change this to the ports you want to scan
+        $socket = New-Object System.Net.Sockets.TcpClient
+        $connection = $socket.BeginConnect($ip, $port, $null, $null)
+        Start-Sleep -Milliseconds 100 # Wait for the connection to be established
+        if ($socket.Connected) {
+            Write-Host "$ip - $port is open"
+            if ($port -eq '445') { echo "$ip" >> $env:temp\ip445.txt }
+            $socket.Close()
+
+        }
+    }
+}
+
+# Enumerate network shares
+$IPsWithPort445 = get-content $env:temp\ip445.txt
+Write-Host "`nNetwork Shares"
+Write-Host "----------------"
+foreach ($IP in $IPsWithPort445) {
+    $shares = net view $IP | Select-Object -Skip 7 | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" -and $_ -ne "The command completed successfully." -and $_ -notmatch "^\\\\\\" } | Sort-Object
+    Write-Host "$ip - $shares"
+}
